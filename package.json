@@ -1,0 +1,23 @@
+{
+  "name": "forum",
+  "version": "1.0.0",
+  "description": "a simple forum",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkylerRankin/forum.git"
+  },
+  "author": "Skyler Rankin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SkylerRankin/forum/issues"
+  },
+  "homepage": "https://github.com/SkylerRankin/forum#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.3"
+  }
+}
