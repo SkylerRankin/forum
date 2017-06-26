@@ -1,26 +1,4 @@
-<!Doctype>
-<html>
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-  <link href='public/styles/login_style.css' rel='stylesheet'>
-</head>
-<body>
-
-  <div id='header' class='row'>
-    <div class='column-60'>
-      <div id='logo'>[a forum]</div>
-    </div><!-- Comment here removes auto whitespace between inline blocks
-    --><div class='column-40'>
-      <div id='nav_area'>
-        <span class='nav_item'><a href='#'>Sign Up</a></span><!--
-     --><span class='nav_item'><a href='#'>Login</a></span><!--
-     --><span class='nav_item'><a href='#'>About</a></span>
-      </div>
-      <div id='stat_area'>
-        Today's goal: 0 Users!
-      </div>
-    </div>
-  </div>
+<% include partitions/header %>
 
   <div id='signup_wrapper'>
     <form>
@@ -47,11 +25,4 @@
     </form>
   </div>
 
-  <div id='footer'>
-    Not copyrighted by Skyler Rankin. No liscence.<br>
-    Github<br>
-    2017
-  </div<
-
-</body>
-</html>
+<% include partitions/footer %>
