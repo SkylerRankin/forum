@@ -9,13 +9,17 @@
   <div id='header' class='row'>
     <div class='column-60'>
       <div id='logo'><a href='/'>[a forum]</a></div>
-      
+
     </div><!-- Comment here removes auto whitespace between inline blocks
     --><div class='column-40'>
       <div id='nav_area'>
-        <span class='nav_item'><a href='/signup'>Sign Up</a></span><!--
-     --><span class='nav_item'><a href='/login'>Login</a></span><!--
-     --><span class='nav_item'><a href='/about'>About</a></span>
+        <% if (false) {%>
+          logged in....
+     <% } else {%>
+       <span class='nav_item'><a href='/signup'>Sign Up</a></span><!--
+    --><span class='nav_item'><a href='/login'>Login</a></span><!--
+    --><span class='nav_item'><a href='/about'>About</a></span>
+       <% } %>
       </div>
       <div id='stat_area'>
         Today's goal: 0 Users!
