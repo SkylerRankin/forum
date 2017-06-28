@@ -22,7 +22,7 @@ userSchema.pre('save', function(done) {
   bcrypt.genSalt(10, function(err, salt) {
     if (err) { return done(err); }
     bcrypt.hash(user.password, salt, function() {}, function (err, hashed) {
-      if (err) {return done(err);}\
+      if (err) {return done(err);}
       user.password = hashed;
       done();
     });
@@ -30,4 +30,4 @@ userSchema.pre('save', function(done) {
 });
 
 var User = mongoose.model('User', userSchema);
-modeule.exports = User;
+module.exports = User;

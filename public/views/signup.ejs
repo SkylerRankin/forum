@@ -1,14 +1,14 @@
 <% include partitions/header %>
 
   <div id='signup_wrapper'>
-    <form>
 
+    <form method='post' onsubmit='return checkPasswords(this);'>
       <div class='row'>
         <div class='column-40'>
           Email
         </div><!--
         --><div class='column-60'>
-          <input name='email'>
+          <input name='email' required>
         </div>
       </div>
       <div class='row'>
@@ -16,7 +16,7 @@
           First Name
         </div><!--
         --><div class='column-60'>
-        <input name='first_name'>
+        <input name='first_name' required>
         </div>
       </div>
       <div class='row'>
@@ -24,15 +24,15 @@
           Last Name
         </div><!--
         --><div class='column-60'>
-        <input name='last_name'>
+        <input name='last_name' required>
         </div>
       </div>
       <div class='row'>
         <div class='column-40'>
           Username
         </div><!--
-        --><div class='column-60'>
-        <input>
+        --><div class='column-60' required>
+        <input name='username'>
         </div>
       </div>
       <div class='row'>
@@ -40,7 +40,7 @@
           Password
         </div><!--
         --><div class='column-60'>
-        <input type='password'>
+        <input id='pass' name='password' type='password' required>
         </div>
       </div>
       <div class='row'>
@@ -48,13 +48,25 @@
           Confirm Password
         </div><!--
         --><div class='column-60'>
-        <input type='password'>
+        <input id='pass2' type='password'>
         </div>
       </div>
       <br><br>
-      <button>Create Account</button>
-      <input type='submit' value='Sumbit'>Submit</input>
+
+      <button id='post_button' type='submit'>Create Account</button>
     </form>
+
+    <script>
+    function checkPasswords(form) {
+      console.log('checkPasswords');
+      if (form.pass.value == form.pass2.value) {
+        return true;
+      } else {
+        alert('Passwords must match.');
+        return false;
+      }
+    }
+    </script>
   </div>
 
 <% include partitions/footer %>
